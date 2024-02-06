@@ -71,6 +71,7 @@ function getMaxNumber(a, b, c) {
  */
 function canQueenCaptureKing(/* queen, king */) {
   throw new Error('Not implemented');
+  // if(queen.x == king.x || queen.y == king.y);
 }
 
 /**
@@ -91,8 +92,14 @@ function canQueenCaptureKing(/* queen, king */) {
  *  2, 2, 5   => false
  *  3, 0, 3   => false
  */
-function isIsoscelesTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isIsoscelesTriangle(a, b, c) {
+  if (a + b <= c || a + c <= b || b + c <= a) {
+    return false;
+  }
+  if (a === b || a === c || b === c) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -108,6 +115,7 @@ function isIsoscelesTriangle(/* a, b, c */) {
  *  5   => V
  *  10  => X
  *  26  => XXVI
+ *
  */
 function convertToRomanNumerals(/* num */) {
   throw new Error('Not implemented');
